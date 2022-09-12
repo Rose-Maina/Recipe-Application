@@ -1,15 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
 
 .App {
   background-color: brown;
-  font-size: medium;
+  box-sizing: border-box;
 
 }
-body {
-  text-align: center;
-  background-color: whitesmoke;
-  margin: 10px;
-}
+
 img {
   height: 1.2cm;
 }
@@ -58,32 +54,52 @@ li a:hover {
   padding:10px 20px;
   color:#fff;
 }
-.recipe-body {
-  border-radius:10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  float: left;
-  background: #fff;
-  padding: 10px 10px;
-} 
-.col {
-  height: 500px;
-
-}
-.image {
-  border-radius:50%;
-  width:300px;
-  height: 300px;
-}
 
 .recipes-container{
   display: grid;
   grid-template-columns: repeat(2, ifr);
 } 
+.recipe-body {
+  border-radius:10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  float: left;
+  background: brown;
+  padding: 10px 10px;
+} 
+.Card{ 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  text-align: center;
+  background-color: brown;
+  padding:0 5px;
+  display: grid;
+  justify-content: center;
+  margin-left: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+  
+}
+.column{
+  column-gap: 20px;
+  column-rule: 4px; 
+  columns: 200px 3;
+  float: left;
+  padding: 10px 10px;
+  margin: 1rem auto;
+  display: grid;
+}
+
+.image {
+  border-radius:50%;
+  width: 250px;
+  height: 250px;
+}
+
 .ingredient-container {
   background: #cce5ff;
   color: darkblue;
   margin: 5px;
+  width: 50%;
 }
 .ingredient {
   background: white;
@@ -132,7 +148,7 @@ td, th {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
-  column-width: 1000px;
+  column-width: 100px;
 }
 
 tr:nth-child(even){background-color: #f2f2f2;}
@@ -164,7 +180,8 @@ th {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color:#D91671;
+  min-height: min-content;
+  /* background-color:#D91671; */
   color: white;
   text-align: center;
 }

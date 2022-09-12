@@ -8,7 +8,7 @@ const Home = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState(' ');
-  const [query, setQuery] = useState('cherry')
+  const [query, setQuery] = useState('apple')
 
   useEffect(() => {
     getRecipes();
@@ -43,17 +43,13 @@ const Home = () => {
         <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
         <button className="search-button" type="submit"> Search </button>
       </form>
-    <div className ="recipes-container">
-      <div className="inner-recipes-container">
-        <div className="row">
-            {mealRecipes}
+    {/* <div className="row"> */}
+      <div className="column">
+          <div className ="Card">
+              {mealRecipes}
+        </div>
       </div>
-      <div class="footer">
-        <p>Copyright &copy; myrecipes.com</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSEo__EXpP_zd581Ds_X9HwwbXg_fRPIo6A&usqp=CAU" alt="logo" />     
-      </div>
-  </div>
-  </div>
+    {/* </div> */}
   </div>
   )};
 
