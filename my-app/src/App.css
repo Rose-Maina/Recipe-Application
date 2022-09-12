@@ -37,3 +37,22 @@ li a {
 li a:hover {
   background-color: whitesmoke;
 }
+.search-form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width:30%;
+  border:none;
+  padding:10px;
+}
+
+.search-button {
+  background: #D91671;
+  border:none;
+  padding:10px 20px;
+  color:#fff;
+}
