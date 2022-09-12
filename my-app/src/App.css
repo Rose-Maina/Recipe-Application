@@ -73,3 +73,17 @@ li a:hover {
   width:300px;
   height: 300px;
 }
+.recipes-container{
+  display: grid;
+  grid-template-columns: repeat(2, ifr);
+} 
+.ingredient-container {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}
+.ingredient {
+  background: white;
+} 
+
+
