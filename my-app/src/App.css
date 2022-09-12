@@ -153,4 +153,16 @@ th {
   border: solid #cccccc 1px;
   float: left;
 }
+.footer {
+  position:static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#D91671;
+  color: white;
+  text-align: center;
+}
+#submit{
+  background-color: #cacace;
+}
 
