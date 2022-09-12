@@ -1,6 +1,8 @@
 # My Recipes
 The application, "my-recipes", is the ultimate cooking application that helps the user access numerous recipes depending on their preferred ingredient. Searching for any ingredient gives them access to numerous recipes they could access and allows them to make and delete comments on any of the recipes they tried out.
-This React application was supported by a Sinatra Backend API whose link is: https://afternoon-hollows-30320.herokuapp.com/comments. The respective repository for this backend application is https://github.com/Rose-Maina/phase-3-sinatra-react-project
+### This React application was supported by a Sinatra Backend API whose link is: https://afternoon-hollows-30320.herokuapp.com/comments.
+
+###The respective repository for this backend application is https://github.com/Rose-Maina/phase-3-sinatra-react-project
 
 # Author
 Rose Maina
