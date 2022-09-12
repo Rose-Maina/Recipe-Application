@@ -2,10 +2,12 @@
 
 .App {
   background-color: brown;
+  font-size: medium;
+
 }
 body {
   text-align: center;
-  /* background-color: #FF402E; */
+  background-color: whitesmoke;
   margin: 10px;
 }
 img {
