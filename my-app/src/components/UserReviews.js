@@ -25,7 +25,8 @@ function UserReviews() {
     function handleNewUserReview(e) {
         e.preventDefault();
 
-        fetch("https://afternoon-hollows-30320.herokuapp.com/comments"),{
+        fetch("https://afternoon-hollows-30320.herokuapp.com/comments"),
+        {
           method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
