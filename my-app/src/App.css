@@ -137,8 +137,6 @@ tr:nth-child(even){background-color: #f2f2f2;}
 tr:hover {background-color: #ddd;}
 
 th {
-  /* padding-top: 12px;
-  padding-bottom: 12px; */
   text-align: left;
   background-color: #ad6747;
   color: white;
@@ -148,7 +146,6 @@ th {
   width: 100%;
 }
 #delete{
-  /* display: inline-block; */
   height: 10%;
   color: #fff;
   background-color: #ad6747;
