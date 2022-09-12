@@ -2,7 +2,13 @@ import React from 'react';
 
 function Comments(props){
 
+    function handleDeleteClick(id, onCommentDelete) {
+        fetch(`hhttp://localhost:9292/comments/${id}`, {
+          method: "DELETE",
+        });
     
+        onCommentDelete(id);
+      }
     return(
         <div>
             <table>
