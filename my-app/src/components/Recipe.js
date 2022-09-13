@@ -8,6 +8,8 @@ const Recipe = ({ title, image, ingredients }) => {
   const handleClose = () => setShow(false);
 
   return (
+      <div className="col">
+        <div className='card' style={{width: 25 + 'rem'}}>
       <div className="card text-center bg-secondary mb-3">
         <div className="card-body">
           <h1>{title}</h1>
@@ -16,6 +18,8 @@ const Recipe = ({ title, image, ingredients }) => {
           <button type="button" className="btn btn-primary" onClick={handleShow}>
             View Ingredients'
           </button>
+      </div>
+      </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header>
                     <Modal.Title></Modal.Title>
@@ -36,6 +40,7 @@ const Recipe = ({ title, image, ingredients }) => {
           </div>
       </div>
     </div>
+  
   );
 };
 

@@ -3,58 +3,62 @@ import Comment from './Comment';
 
 function UserReviews() {
 
-    const [userReviews, setUserReviews] = useState([]);
+    const [users, setUsers] = useState([]);
     const [formData, setFormData] = useState({
         username: "",
-        comment: "",
-        timestamps: ""
+        comment: ""
     });
 
     useEffect(() => {
         fetch ("https://afternoon-hollows-30320.herokuapp.com/comments")
             .then ((response) => response.json())
-            .then ((userReviews) => setUserReviews
-              (userReviews));
+            .then ((users) => setUsers
+              (users));
             //   console.log(userReviews)
     }, []);
 
-    let pageReviews = userReviews.map((userReview) => (
-        <Comment key={userReview.id} username={userReview.username} comment={userReview.comment} />
+    let pageReviews = users.map((user) => (
+        <Comment username={user.username} comment={user.comment} />
    ));
-    console.log(userReviews);
+    console.log(users);
 
     function handleSubmit(e) {
         e.preventDefault();
 
-        const userData = { 
-            username:formData.username,
-            comment:formData.comment,
-            timestamps:formData.timestamps
-        };
+        // const userData = { 
+        //     username:formData.username,
+        //     comment:formData.comment
+        // };
         fetch("https://afternoon-hollows-30320.herokuapp.com/comments",
         {
           method: "POST",
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(userData)
+            body: JSON.stringify({
+                username: formData.username,
+                comment: formData.comment
+            })
         })
          .then ((response) => response.json())
          .then((newReviewData) => {
                 console.log(newReviewData)
          }) 
+         .catch((err) => {
+            console.log(err.message);
+         });
     }
-    // const handleChange = e => {
-    //     setFormData({
-    //         ...formData,
-    //         [e.target.username]: e.target.value,
-    //     });
-    // }
+    const handleChange = e => {
+        setFormData({
+            ...formData,
+            [e.target.username]: e.target.value,
+        });
+    }
     
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input  type="text" id="username" value={formData.username} name="username" placeholder="Enter Your Username" onChange={(e)=>setFormData(e.target.value)}/>
-                <input  type="text" id="comment" value={formData.comment} name="comment" placeholder="Write Your Comment" onChange={(e)=>setFormData(e.target.value)}/>
-                <input type="submit" id="submit" value="Post Review"/>
+                <input  type="text"  name="username" placeholder="Enter Your Username" onChange={handleChange}/>
+                <input  type="text"  name="comment" placeholder="Write Your Comment" onChange={handleChange}/>
+                <input type="submit" value="Post Review"/>
             </form>  
         <div>
             {pageReviews}

@@ -43,12 +43,12 @@ const Home = () => {
         <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
         <button className="search-button" type="submit"> Search </button>
       </form>
-    {/* <div className="row"> */}
-      <div className="column">
-          <div className ="Card">
+    <div className="row">
+      {/* <div className="column"> */}
+          {/* <div className ="Card"> */}
               {mealRecipes}
         </div>
-      </div>
+      {/* </div> */}
     {/* </div> */}
   </div>
   )};
