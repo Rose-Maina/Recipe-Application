@@ -1,69 +1,44 @@
 import React, { useState, useEffect } from 'react';
-import Comment from './Comment';
+// import Comment from './Comment';
+import PostComment from './PostComment';
 
-function UserReviews() {
+function UserReviews(comment) {
 
-    const [users, setUsers] = useState([]);
-    const [formData, setFormData] = useState({
-        username: "",
-        comment: ""
-    });
+    const [comments, setComments] = useState([]);
 
     useEffect(() => {
         fetch ("https://afternoon-hollows-30320.herokuapp.com/comments")
             .then ((response) => response.json())
-            .then ((users) => setUsers
-              (users));
-            //   console.log(userReviews)
+            .then ((comments) => setComments
+              (comments));
+            // console.log(comments)
     }, []);
 
-    let pageReviews = users.map((user) => (
-        <Comment username={user.username} comment={user.comment} />
-   ));
-    console.log(users);
 
-    function handleSubmit(e) {
-        e.preventDefault();
-
-        // const userData = { 
-        //     username:formData.username,
-        //     comment:formData.comment
-        // };
-        fetch("https://afternoon-hollows-30320.herokuapp.com/comments",
-        {
-          method: "POST",
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                username: formData.username,
-                comment: formData.comment
-            })
-        })
-         .then ((response) => response.json())
-         .then((newReviewData) => {
-                console.log(newReviewData)
-         }) 
-         .catch((err) => {
-            console.log(err.message);
-         });
-    }
-    const handleChange = e => {
-        setFormData({
-            ...formData,
-            [e.target.username]: e.target.value,
-        });
-    }
     
+    function addNewComment(comment) {
+        setComments([...comments, comment])
+    }
+
     return (
-        <>
-            <form onSubmit={handleSubmit}>
-                <input  type="text"  name="username" placeholder="Enter Your Username" onChange={handleChange}/>
-                <input  type="text"  name="comment" placeholder="Write Your Comment" onChange={handleChange}/>
-                <input type="submit" value="Post Review"/>
-            </form>  
         <div>
-            {pageReviews}
-        </div>
-        </>
+            <PostComment addNewComment={addNewComment}/>
+            <div>
+                <div className="row">
+                {/* <div className="card"  style={{width: 18 + 'rem'}}> */}
+                <h1>User Reviews</h1>
+                    {comments.map((comment) => (
+                    <div className="comments"
+                        key={comments.id}
+                        username={comments.username}
+                        comment={comments.comment}>
+                    <li>username: {comment.username}</li>
+                    <p>comment: {comment.comment}</p>
+                   </div>))}
+                </div>
+                </div>
+                </div>  
+        // </div>
     )
 }
 export default UserReviews;

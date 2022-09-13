@@ -44,12 +44,8 @@ const Home = () => {
         <button className="search-button" type="submit"> Search </button>
       </form>
     <div className="row">
-      {/* <div className="column"> */}
-          {/* <div className ="Card"> */}
               {mealRecipes}
         </div>
-      {/* </div> */}
-    {/* </div> */}
   </div>
   )};
 
