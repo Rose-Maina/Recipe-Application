@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/phase-3-recipe-app/static/css/main.f2ba5021.css",
-    "main.js": "/phase-3-recipe-app/static/js/main.3b84cf43.js",
-    "static/js/787.28cb0dcd.chunk.js": "/phase-3-recipe-app/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/phase-3-recipe-app/index.html",
-    "main.f2ba5021.css.map": "/phase-3-recipe-app/static/css/main.f2ba5021.css.map",
-    "main.3b84cf43.js.map": "/phase-3-recipe-app/static/js/main.3b84cf43.js.map",
-    "787.28cb0dcd.chunk.js.map": "/phase-3-recipe-app/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/phase-3-recipe-app/my-app/static/css/main.20c1695b.css",
+    "main.js": "/phase-3-recipe-app/my-app/static/js/main.6dc11617.js",
+    "static/js/787.28cb0dcd.chunk.js": "/phase-3-recipe-app/my-app/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/phase-3-recipe-app/my-app/index.html",
+    "main.20c1695b.css.map": "/phase-3-recipe-app/my-app/static/css/main.20c1695b.css.map",
+    "main.6dc11617.js.map": "/phase-3-recipe-app/my-app/static/js/main.6dc11617.js.map",
+    "787.28cb0dcd.chunk.js.map": "/phase-3-recipe-app/my-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2ba5021.css",
-    "static/js/main.3b84cf43.js"
+    "static/css/main.20c1695b.css",
+    "static/js/main.6dc11617.js"
   ]
 }
