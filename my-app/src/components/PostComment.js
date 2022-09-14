@@ -41,8 +41,8 @@ function handleSubmit(event){
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input  type="text"  value={comments.username} name="username" placeholder="Enter Your Username" onChange={handleChange}/>
-                <input  type="text"  value={comments.comment} name="comment" placeholder="Write Your Comment" onChange={handleChange}/>
+                <input  type="text"  name="username" placeholder="Enter Your Username" onChange={handleChange}/>
+                <input  type="text"  name="comment" placeholder="Write Your Comment" onChange={handleChange}/>
                 <input type="submit" value="Post Review"/>
             </form>  
         </>
