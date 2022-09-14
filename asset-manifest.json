@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/phase-3-recipe-app/static/css/main.f23949a6.css",
-    "main.js": "/phase-3-recipe-app/static/js/main.139236ce.js",
+    "main.js": "/phase-3-recipe-app/static/js/main.08836552.js",
     "static/js/787.28cb0dcd.chunk.js": "/phase-3-recipe-app/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/phase-3-recipe-app/index.html",
     "main.f23949a6.css.map": "/phase-3-recipe-app/static/css/main.f23949a6.css.map",
-    "main.139236ce.js.map": "/phase-3-recipe-app/static/js/main.139236ce.js.map",
+    "main.08836552.js.map": "/phase-3-recipe-app/static/js/main.08836552.js.map",
     "787.28cb0dcd.chunk.js.map": "/phase-3-recipe-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f23949a6.css",
-    "static/js/main.139236ce.js"
+    "static/js/main.08836552.js"
   ]
 }
